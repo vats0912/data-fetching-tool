@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import { Loader } from 'lucide-react';
 import { Paginator } from 'primereact/paginator';
 import { DataTable } from 'primereact/datatable';
@@ -41,7 +41,6 @@ function Table() {
     setLimit(data.pagination.limit);
 
     if(autoSelective){
-    const alreadySelectedTitles = new Set(selectedProducts.map((item) => item.title));
     const remaining = (selectCount ?? 0) - selectedProducts.length;
     if (remaining >= 0) {
       const toSelect = data.data.slice(0, remaining);
